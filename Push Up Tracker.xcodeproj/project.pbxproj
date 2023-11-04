@@ -16,6 +16,8 @@
 		07B2AF202AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF1F2AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift */; };
 		07B2AF2A2AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF292AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift */; };
 		07B2AF2C2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF2B2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift */; };
+		07B2AF4E2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF4C2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift */; };
+		07B2AF4F2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF4D2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		07B2AF252AF6A1DE00866EE2 /* Push Up TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Push Up TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF292AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerUITests.swift; sourceTree = "<group>"; };
 		07B2AF2B2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		07B2AF4C2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PushUpSet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		07B2AF4D2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PushUpSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 		07B2AEFC2AF6A1DD00866EE2 = {
 			isa = PBXGroup;
 			children = (
+				07B2AF4C2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift */,
+				07B2AF4D2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift */,
 				07B2AF072AF6A1DD00866EE2 /* Push Up Tracker */,
 				07B2AF1E2AF6A1DE00866EE2 /* Push Up TrackerTests */,
 				07B2AF282AF6A1DE00866EE2 /* Push Up TrackerUITests */,
@@ -266,9 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B2AF122AF6A1DE00866EE2 /* Persistence.swift in Sources */,
+				07B2AF4E2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift in Sources */,
 				07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */,
 				07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */,
 				07B2AF152AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodeld in Sources */,
+				07B2AF4F2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
