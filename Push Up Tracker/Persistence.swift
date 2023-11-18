@@ -13,10 +13,10 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
+        for _ in 0..<3 {
             let newSet = PushUpSet(context: viewContext)
             newSet.timestamp = Date()
-            newSet.reps = 5
+            newSet.reps = Int64.random(in: 10..<50)
         }
         do {
             try viewContext.save()

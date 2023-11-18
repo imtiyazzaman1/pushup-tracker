@@ -10,20 +10,18 @@ import CoreData
 
 struct ContentView: View {
     @State private var currentCount: Int64 = 0
-    @State private var sets: [PushUpSet] = []
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \PushUpSet.timestamp, ascending: true)],
+        animation: .default)
+    private var sets: FetchedResults<PushUpSet>
     
     private let dateFormatter = DateFormatter()
-    
+   
     init() {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
 
-//    @FetchRequest(
-//        sortDescriptors: [NSSortDescriptor(keyPath: \PushUpSet.timestamp, ascending: true)],
-//        animation: .default)
-//    private var sets: FetchedResults<PushUpSet>
-    
     var body: some View {
         VStack{
             Text("Press Up Tracker")
@@ -31,7 +29,7 @@ struct ContentView: View {
             Text("\(currentCount)")
                 .font(.title)
             
-            Button(action: increment) {
+            Button(action: { currentCount += 1 }) {
                 Label("add", systemImage: "plus")
             }
             
@@ -47,17 +45,20 @@ struct ContentView: View {
         }
     }
     
-    private func increment() {
-        currentCount += 1
-    }
-    
     private func save() {
         let p = PushUpSet(context: viewContext)
         p.timestamp = Date()
         p.reps = currentCount
-        sets.append(p)
         
-        currentCount = 0
+        if viewContext.hasChanges {
+            do {
+                try viewContext.save()
+                currentCount = 0
+            }
+            catch {
+                abort()
+            }
+        }
     }
 }
 
