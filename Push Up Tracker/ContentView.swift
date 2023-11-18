@@ -9,12 +9,14 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var currentCount: Int64 = 0
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \PushUpSet.timestamp, ascending: true)],
         animation: .default)
     private var sets: FetchedResults<PushUpSet>
+    
+    @State private var currentCount: Int64 = 0
+    @State private var total: Int64 = 0
     
     private let dateFormatter = DateFormatter()
    
@@ -23,7 +25,7 @@ struct ContentView: View {
     }
 
     var body: some View {
-        VStack{
+        VStack {
             Text("Press Up Tracker")
                 .font(.caption)
             Text("\(currentCount)")
@@ -36,12 +38,18 @@ struct ContentView: View {
             Button("Save", action: save)
                 .disabled(currentCount == 0)
             
+            Text("Total: \(total)")
+                .font(.title)
+            
             List{
                 ForEach(sets) { pushUpSet in
                     Text("\(dateFormatter.string(from: pushUpSet.timestamp!)) - \(pushUpSet.reps)")
                 }
             }
 
+        }
+        .onAppear {
+            calculateTotal()
         }
     }
     
@@ -54,11 +62,18 @@ struct ContentView: View {
             do {
                 try viewContext.save()
                 currentCount = 0
+                calculateTotal()
             }
             catch {
                 abort()
             }
         }
+    }
+    
+    private func calculateTotal() {
+        self.total = sets.reduce(0, { (res: Int64, pushUpSet: PushUpSet) -> Int64 in
+            return res + pushUpSet.reps
+        })
     }
 }
 
