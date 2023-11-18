@@ -9,14 +9,20 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State private var currentCount: Int = 0
-    @State private var counts: [Int] = []
+    @State private var currentCount: Int64 = 0
+    @State private var sets: [PushUpSet] = []
     @Environment(\.managedObjectContext) private var viewContext
+    
+    private let dateFormatter = DateFormatter()
+    
+    init() {
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    }
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \PushUpSet.timestamp, ascending: true)],
-        animation: .default)
-    private var sets: FetchedResults<PushUpSet>
+//    @FetchRequest(
+//        sortDescriptors: [NSSortDescriptor(keyPath: \PushUpSet.timestamp, ascending: true)],
+//        animation: .default)
+//    private var sets: FetchedResults<PushUpSet>
     
     var body: some View {
         VStack{
@@ -32,6 +38,11 @@ struct ContentView: View {
             Button("Save", action: save)
                 .disabled(currentCount == 0)
             
+            List{
+                ForEach(sets) { pushUpSet in
+                    Text("\(dateFormatter.string(from: pushUpSet.timestamp!)) - \(pushUpSet.reps)")
+                }
+            }
 
         }
     }
@@ -41,6 +52,11 @@ struct ContentView: View {
     }
     
     private func save() {
+        let p = PushUpSet(context: viewContext)
+        p.timestamp = Date()
+        p.reps = currentCount
+        sets.append(p)
+        
         currentCount = 0
     }
 }
