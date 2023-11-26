@@ -89,6 +89,8 @@ struct ARFaceTrackingView: UIViewRepresentable {
             
             parent.zPosition = z
             
+            
+            print(faceAnchor.isTracked)
             print(z)
 
             // Implement the logic to count push-ups based on the z-position changes

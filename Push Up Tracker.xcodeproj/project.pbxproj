@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0715A2EC2B13781100C00ABA /* rnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A2EB2B13781100C00ABA /* rnd.swift */; };
+		0715A2EE2B137B5500C00ABA /* PushUpCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A2ED2B137B5500C00ABA /* PushUpCounter.swift */; };
+		0715A2F22B137DD900C00ABA /* PushUpCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A2F12B137DD900C00ABA /* PushUpCounterTests.swift */; };
+		075D02A82B12809500E72927 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D02A72B12809500E72927 /* RepCounterView.swift */; };
 		07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */; };
 		07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */; };
 		07B2AF0D2AF6A1DE00866EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */; };
@@ -38,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0715A2EB2B13781100C00ABA /* rnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnd.swift; sourceTree = "<group>"; };
+		0715A2ED2B137B5500C00ABA /* PushUpCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpCounter.swift; sourceTree = "<group>"; };
+		0715A2F12B137DD900C00ABA /* PushUpCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpCounterTests.swift; sourceTree = "<group>"; };
+		075D02A72B12809500E72927 /* RepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterView.swift; sourceTree = "<group>"; };
 		07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Push Up Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerApp.swift; sourceTree = "<group>"; };
 		07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,11 +115,14 @@
 			children = (
 				07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */,
 				07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */,
+				0715A2EB2B13781100C00ABA /* rnd.swift */,
 				07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */,
 				07B2AF112AF6A1DE00866EE2 /* Persistence.swift */,
 				07B2AF162AF6A1DE00866EE2 /* Info.plist */,
 				07B2AF132AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodeld */,
 				07B2AF0E2AF6A1DE00866EE2 /* Preview Content */,
+				075D02A72B12809500E72927 /* RepCounterView.swift */,
+				0715A2ED2B137B5500C00ABA /* PushUpCounter.swift */,
 			);
 			path = "Push Up Tracker";
 			sourceTree = "<group>";
@@ -128,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				07B2AF1F2AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift */,
+				0715A2F12B137DD900C00ABA /* PushUpCounterTests.swift */,
 			);
 			path = "Push Up TrackerTests";
 			sourceTree = "<group>";
@@ -271,12 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0715A2EC2B13781100C00ABA /* rnd.swift in Sources */,
 				07B2AF122AF6A1DE00866EE2 /* Persistence.swift in Sources */,
+				0715A2EE2B137B5500C00ABA /* PushUpCounter.swift in Sources */,
 				07B2AF4E2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift in Sources */,
 				07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */,
 				07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */,
 				07B2AF152AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodeld in Sources */,
 				07B2AF4F2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift in Sources */,
+				075D02A82B12809500E72927 /* RepCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B2AF202AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift in Sources */,
+				0715A2F22B137DD900C00ABA /* PushUpCounterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
