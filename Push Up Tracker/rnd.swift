@@ -7,11 +7,8 @@
 
 import SwiftUI
 import CoreData
-import ARKit
 
 struct RnDView: View {
-    private var arView: ARSCNView = ARSCNView()
-    
     @StateObject private var tracker: StatefulTracker = StatefulTracker()
     
     @State private var isTracking = false
