@@ -12,6 +12,7 @@
 		0715A2F22B137DD900C00ABA /* PushUpCounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A2F12B137DD900C00ABA /* PushUpCounterTests.swift */; };
 		0715A50C2B13B64200C00ABA /* StatefulTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A50B2B13B64200C00ABA /* StatefulTracker.swift */; };
 		0715A50F2B13B6A400C00ABA /* StatefulTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A50E2B13B6A400C00ABA /* StatefulTrackerTests.swift */; };
+		0715A5142B19CCE200C00ABA /* ARFaceTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A5132B19CCE200C00ABA /* ARFaceTrackingView.swift */; };
 		075D02A82B12809500E72927 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D02A72B12809500E72927 /* RepCounterView.swift */; };
 		07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */; };
 		07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */; };
@@ -49,6 +50,7 @@
 		0715A2F12B137DD900C00ABA /* PushUpCounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpCounterTests.swift; sourceTree = "<group>"; };
 		0715A50B2B13B64200C00ABA /* StatefulTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulTracker.swift; sourceTree = "<group>"; };
 		0715A50E2B13B6A400C00ABA /* StatefulTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulTrackerTests.swift; sourceTree = "<group>"; };
+		0715A5132B19CCE200C00ABA /* ARFaceTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceTrackingView.swift; sourceTree = "<group>"; };
 		075D02A72B12809500E72927 /* RepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterView.swift; sourceTree = "<group>"; };
 		07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Push Up Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerApp.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = core;
 			sourceTree = "<group>";
 		};
+		0715A5102B19CC6E00C00ABA /* views */ = {
+			isa = PBXGroup;
+			children = (
+				0715A5132B19CCE200C00ABA /* ARFaceTrackingView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		07B2AEFC2AF6A1DD00866EE2 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 		07B2AF072AF6A1DD00866EE2 /* Push Up Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				0715A5102B19CC6E00C00ABA /* views */,
 				0715A50A2B13B63100C00ABA /* core */,
 				07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */,
 				07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */,
@@ -305,6 +316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0715A5142B19CCE200C00ABA /* ARFaceTrackingView.swift in Sources */,
 				0715A2EC2B13781100C00ABA /* rnd.swift in Sources */,
 				07B2AF122AF6A1DE00866EE2 /* Persistence.swift in Sources */,
 				0715A50C2B13B64200C00ABA /* StatefulTracker.swift in Sources */,
