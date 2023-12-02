@@ -7,11 +7,14 @@
 
 import SwiftUI
 import CoreData
+import CoreMotion
 
 struct RnDView: View {
     @StateObject private var tracker: StatefulTracker = StatefulTracker()
     
     @State private var isTracking = false
+    
+    var motionManager = CMMotionManager()
 
     var body: some View {
         VStack {
@@ -24,6 +27,11 @@ struct RnDView: View {
 
             Button(isTracking ? "Stop" : "Start") {
                 isTracking.toggle()
+                if (isTracking) {
+                    start()
+                } else {
+                    stop()
+                }
             }
             .padding()
             .background(Color.blue)
@@ -33,6 +41,16 @@ struct RnDView: View {
             ARFaceTrackingView(tracker: tracker, isTracking: $isTracking)
                         .frame(width: 0, height: 0)
         }
+    }
+    
+    func start() {
+        print("starting...")
+        print("ending...")
+    
+    }
+    
+    func stop() {
+        motionManager.stopGyroUpdates()
     }
 }
 

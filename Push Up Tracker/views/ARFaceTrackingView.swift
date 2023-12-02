@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ARKit
+import CoreMotion
 
 struct ARFaceTrackingView: UIViewRepresentable {
     @ObservedObject var tracker: StatefulTracker
@@ -15,7 +16,10 @@ struct ARFaceTrackingView: UIViewRepresentable {
     static var arView: ARSCNView = ARSCNView()
     static var configuration = ARFaceTrackingConfiguration()
     
+    var motionManager: CMMotionManager = CMMotionManager()
+    
     func makeUIView(context: Context) -> ARSCNView {
+        motionManager.accelerometerUpdateInterval = 0.5
         ARFaceTrackingView.arView.session.delegate = context.coordinator
         
         return ARFaceTrackingView.arView
@@ -41,12 +45,17 @@ struct ARFaceTrackingView: UIViewRepresentable {
         }
 
         func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-            guard let faceAnchor = anchors.compactMap({ $0 as? ARFaceAnchor }).first else { return }
-            
-            if (faceAnchor.isTracked) {
-                parent.tracker.setPosition(PushUpPosition.up)
-            } else {
-                parent.tracker.setPosition(PushUpPosition.down)
+            parent.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { [self] (accelData, error) in
+                guard let faceAnchor = anchors.compactMap({ $0 as? ARFaceAnchor }).first else { return }
+                guard let acceleration = accelData?.acceleration else { return }
+                
+                var data: AccelerationData = AccelerationData(x: acceleration.x, y: acceleration.y, z: acceleration.z)
+                
+                if (faceAnchor.isTracked) {
+                    parent.tracker.setPosition(PushUpPosition.up, data)
+                } else {
+                    parent.tracker.setPosition(PushUpPosition.down, data)
+                }
             }
         }
     }
