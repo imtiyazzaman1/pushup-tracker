@@ -14,8 +14,6 @@ struct RnDView: View {
     
     @State private var isTracking = false
     
-    var motionManager = CMMotionManager()
-
     var body: some View {
         VStack {
             Text("Push-Up Counter")
@@ -44,13 +42,11 @@ struct RnDView: View {
     }
     
     func start() {
-        print("starting...")
-        print("ending...")
-    
+        isTracking = true
     }
     
     func stop() {
-        motionManager.stopGyroUpdates()
+        isTracking = false
     }
 }
 

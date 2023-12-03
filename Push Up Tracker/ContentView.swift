@@ -15,7 +15,9 @@ struct ContentView: View {
         animation: .default)
     private var sets: FetchedResults<PushUpSet>
     
-    @State private var currentCount: Int64 = 0
+    @StateObject private var tracker: StatefulTracker = StatefulTracker()
+    
+    @State private var isTracking = false
     @State private var total: Int64 = 0
     
     private let dateFormatter = DateFormatter()
@@ -26,20 +28,28 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text("Press Up Tracker")
-                .font(.caption)
-            Text("\(currentCount)")
-                .font(.title)
-            
-            Button(action: { currentCount += 1 }) {
-                Label("add", systemImage: "plus")
+            Text("Push-Up Counter")
+                .font(.largeTitle)
+
+            Text("\(tracker.count)")
+                .font(.system(size: 100))
+                .fontWeight(.bold)
+
+            Button(isTracking ? "Stop" : "Start") {
+                isTracking.toggle()
+                if (isTracking) {
+                    start()
+                } else {
+                    stop()
+                }
             }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .clipShape(Capsule())
             
-            Button("Save", action: save)
-                .disabled(currentCount == 0)
-            
-            Text("Total: \(total)")
-                .font(.title)
+            ARFaceTrackingView(tracker: tracker, isTracking: $isTracking)
+                        .frame(width: 0, height: 0)
             
             List{
                 ForEach(sets) { pushUpSet in
@@ -53,15 +63,24 @@ struct ContentView: View {
         }
     }
     
+    func start() {
+        isTracking = true
+    }
+    
+    func stop() {
+        isTracking = false
+        save()
+        tracker.reset()
+    }
+    
     private func save() {
         let p = PushUpSet(context: viewContext)
         p.timestamp = Date()
-        p.reps = currentCount
+        p.reps = tracker.count
         
         if viewContext.hasChanges {
             do {
                 try viewContext.save()
-                currentCount = 0
                 calculateTotal()
             }
             catch {
