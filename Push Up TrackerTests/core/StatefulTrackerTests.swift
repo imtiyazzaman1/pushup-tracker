@@ -43,4 +43,15 @@ final class StatefulTrackerTests: XCTestCase {
         
         XCTAssertEqual(tracker.count, 0)
     }
+    
+    func testTrackerDoesNotIncreaseCountWhenPhoneIsNotFlat() -> Void {
+        let acceleration = AccelerationData(x: -0.003, y: -0.03, z: 9.124)
+        let tracker = StatefulTracker()
+        
+        tracker.setPosition(PushUpPosition.up, acceleration)
+        tracker.setPosition(PushUpPosition.down, acceleration)
+        tracker.setPosition(PushUpPosition.up, acceleration)
+        
+        XCTAssertEqual(tracker.count, 0)
+    }
 }
