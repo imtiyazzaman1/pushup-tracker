@@ -8,7 +8,7 @@
 import Foundation
 
 class StatefulTracker: ObservableObject {
-    @Published var count: Int64 = 0
+    @Published var count: Int = 0
     
     private var position: PushUpPosition = PushUpPosition.up
     

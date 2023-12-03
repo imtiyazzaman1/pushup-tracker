@@ -6,19 +6,18 @@
 //
 
 import SwiftUI
-import CoreData
+import SwiftData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \PushUpSet.timestamp, ascending: true)],
-        animation: .default)
-    private var sets: FetchedResults<PushUpSet>
+    @Environment(\.modelContext) private var modelContext
+    
+    @Query(sort: \PushUpSet.timestamp, order: .reverse)
+    private var sets: [PushUpSet]
     
     @StateObject private var tracker: StatefulTracker = StatefulTracker()
     
     @State private var isTracking = false
-    @State private var total: Int64 = 0
+    @State private var total: Int = 0
     
     private let dateFormatter = DateFormatter()
    
@@ -34,6 +33,8 @@ struct ContentView: View {
             Text("\(tracker.count)")
                 .font(.system(size: 100))
                 .fontWeight(.bold)
+            
+            Text("\(total)")
 
             Button(isTracking ? "Stop" : "Start") {
                 isTracking.toggle()
@@ -53,7 +54,7 @@ struct ContentView: View {
             
             List{
                 ForEach(sets) { pushUpSet in
-                    Text("\(dateFormatter.string(from: pushUpSet.timestamp!)) - \(pushUpSet.reps)")
+                    Text("\(dateFormatter.string(from: pushUpSet.timestamp)) - \(pushUpSet.reps)")
                 }
             }
 
@@ -74,30 +75,18 @@ struct ContentView: View {
     }
     
     private func save() {
-        let p = PushUpSet(context: viewContext)
-        p.timestamp = Date()
-        p.reps = tracker.count
-        
-        if viewContext.hasChanges {
-            do {
-                try viewContext.save()
-                calculateTotal()
-            }
-            catch {
-                abort()
-            }
-        }
+        let p = PushUpSet(tracker.count)
+        modelContext.insert(p)
     }
     
     private func calculateTotal() {
-        self.total = sets.reduce(0, { (res: Int64, pushUpSet: PushUpSet) -> Int64 in
+        self.total = sets.reduce(0, { (res: Int, pushUpSet: PushUpSet) -> Int in
             return res + pushUpSet.reps
         })
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
+#Preview {
+    ContentView()
+        .modelContainer(for: PushUpSet.self, inMemory: true)
 }

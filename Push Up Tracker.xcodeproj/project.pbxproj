@@ -14,18 +14,16 @@
 		0715A50F2B13B6A400C00ABA /* StatefulTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A50E2B13B6A400C00ABA /* StatefulTrackerTests.swift */; };
 		0715A5142B19CCE200C00ABA /* ARFaceTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A5132B19CCE200C00ABA /* ARFaceTrackingView.swift */; };
 		0715A5162B1B293700C00ABA /* AccelerationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A5152B1B293700C00ABA /* AccelerationData.swift */; };
+		073D67CF2B1C70FF00E0BE81 /* PushUpSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67CE2B1C70FF00E0BE81 /* PushUpSet.swift */; };
 		075D02A82B12809500E72927 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D02A72B12809500E72927 /* RepCounterView.swift */; };
 		07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */; };
 		07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */; };
 		07B2AF0D2AF6A1DE00866EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */; };
 		07B2AF102AF6A1DE00866EE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B2AF0F2AF6A1DE00866EE2 /* Preview Assets.xcassets */; };
-		07B2AF122AF6A1DE00866EE2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF112AF6A1DE00866EE2 /* Persistence.swift */; };
 		07B2AF152AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF132AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodeld */; };
 		07B2AF202AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF1F2AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift */; };
 		07B2AF2A2AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF292AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift */; };
 		07B2AF2C2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF2B2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift */; };
-		07B2AF4E2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF4C2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift */; };
-		07B2AF4F2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF4D2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +51,13 @@
 		0715A50E2B13B6A400C00ABA /* StatefulTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulTrackerTests.swift; sourceTree = "<group>"; };
 		0715A5132B19CCE200C00ABA /* ARFaceTrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFaceTrackingView.swift; sourceTree = "<group>"; };
 		0715A5152B1B293700C00ABA /* AccelerationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationData.swift; sourceTree = "<group>"; };
+		073D67CE2B1C70FF00E0BE81 /* PushUpSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSet.swift; sourceTree = "<group>"; };
 		075D02A72B12809500E72927 /* RepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterView.swift; sourceTree = "<group>"; };
 		07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Push Up Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerApp.swift; sourceTree = "<group>"; };
 		07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07B2AF0F2AF6A1DE00866EE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		07B2AF112AF6A1DE00866EE2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		07B2AF142AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Push_Up_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		07B2AF162AF6A1DE00866EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07B2AF1B2AF6A1DE00866EE2 /* Push Up TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Push Up TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,8 +65,6 @@
 		07B2AF252AF6A1DE00866EE2 /* Push Up TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Push Up TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF292AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerUITests.swift; sourceTree = "<group>"; };
 		07B2AF2B2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		07B2AF4C2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PushUpSet+CoreDataClass.swift"; sourceTree = "<group>"; };
-		07B2AF4D2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PushUpSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +120,7 @@
 		07B2AEFC2AF6A1DD00866EE2 = {
 			isa = PBXGroup;
 			children = (
-				07B2AF4C2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift */,
-				07B2AF4D2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift */,
+				073D67CE2B1C70FF00E0BE81 /* PushUpSet.swift */,
 				07B2AF072AF6A1DD00866EE2 /* Push Up Tracker */,
 				07B2AF1E2AF6A1DE00866EE2 /* Push Up TrackerTests */,
 				07B2AF282AF6A1DE00866EE2 /* Push Up TrackerUITests */,
@@ -152,7 +147,6 @@
 				07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */,
 				0715A2EB2B13781100C00ABA /* rnd.swift */,
 				07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */,
-				07B2AF112AF6A1DE00866EE2 /* Persistence.swift */,
 				07B2AF162AF6A1DE00866EE2 /* Info.plist */,
 				07B2AF132AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodeld */,
 				07B2AF0E2AF6A1DE00866EE2 /* Preview Content */,
@@ -322,14 +316,12 @@
 				0715A5142B19CCE200C00ABA /* ARFaceTrackingView.swift in Sources */,
 				0715A5162B1B293700C00ABA /* AccelerationData.swift in Sources */,
 				0715A2EC2B13781100C00ABA /* rnd.swift in Sources */,
-				07B2AF122AF6A1DE00866EE2 /* Persistence.swift in Sources */,
 				0715A50C2B13B64200C00ABA /* StatefulTracker.swift in Sources */,
 				0715A2EE2B137B5500C00ABA /* PushUpCounter.swift in Sources */,
-				07B2AF4E2AF6AF4B00866EE2 /* PushUpSet+CoreDataClass.swift in Sources */,
 				07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */,
 				07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */,
 				07B2AF152AF6A1DE00866EE2 /* Push_Up_Tracker.xcdatamodeld in Sources */,
-				07B2AF4F2AF6AF4B00866EE2 /* PushUpSet+CoreDataProperties.swift in Sources */,
+				073D67CF2B1C70FF00E0BE81 /* PushUpSet.swift in Sources */,
 				075D02A82B12809500E72927 /* RepCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +491,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -528,6 +521,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
