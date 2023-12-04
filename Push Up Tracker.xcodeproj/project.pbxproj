@@ -16,6 +16,10 @@
 		0715A5162B1B293700C00ABA /* AccelerationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0715A5152B1B293700C00ABA /* AccelerationData.swift */; };
 		073D67CF2B1C70FF00E0BE81 /* PushUpSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67CE2B1C70FF00E0BE81 /* PushUpSet.swift */; };
 		073D67D12B1CDBDE00E0BE81 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67D02B1CDBDE00E0BE81 /* TrackingView.swift */; };
+		073D67D52B1CE4D600E0BE81 /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67D42B1CE4D600E0BE81 /* HistoryScreen.swift */; };
+		073D67D82B1CE5E000E0BE81 /* TodayHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67D72B1CE5E000E0BE81 /* TodayHistoryView.swift */; };
+		073D67DA2B1CE60900E0BE81 /* AllHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67D92B1CE60900E0BE81 /* AllHistoryView.swift */; };
+		073D67DE2B1DBCFD00E0BE81 /* PreviewDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67DD2B1DBCFD00E0BE81 /* PreviewDataController.swift */; };
 		075D02A82B12809500E72927 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D02A72B12809500E72927 /* RepCounterView.swift */; };
 		07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */; };
 		07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */; };
@@ -53,6 +57,10 @@
 		0715A5152B1B293700C00ABA /* AccelerationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationData.swift; sourceTree = "<group>"; };
 		073D67CE2B1C70FF00E0BE81 /* PushUpSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSet.swift; sourceTree = "<group>"; };
 		073D67D02B1CDBDE00E0BE81 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
+		073D67D42B1CE4D600E0BE81 /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreen.swift; sourceTree = "<group>"; };
+		073D67D72B1CE5E000E0BE81 /* TodayHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHistoryView.swift; sourceTree = "<group>"; };
+		073D67D92B1CE60900E0BE81 /* AllHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHistoryView.swift; sourceTree = "<group>"; };
+		073D67DD2B1DBCFD00E0BE81 /* PreviewDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDataController.swift; sourceTree = "<group>"; };
 		075D02A72B12809500E72927 /* RepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterView.swift; sourceTree = "<group>"; };
 		07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Push Up Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerApp.swift; sourceTree = "<group>"; };
@@ -112,10 +120,36 @@
 		0715A5102B19CC6E00C00ABA /* views */ = {
 			isa = PBXGroup;
 			children = (
+				073D67D62B1CE5C600E0BE81 /* history */,
 				0715A5132B19CCE200C00ABA /* ARFaceTrackingView.swift */,
 				073D67D02B1CDBDE00E0BE81 /* TrackingView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		073D67D62B1CE5C600E0BE81 /* history */ = {
+			isa = PBXGroup;
+			children = (
+				073D67D72B1CE5E000E0BE81 /* TodayHistoryView.swift */,
+				073D67D92B1CE60900E0BE81 /* AllHistoryView.swift */,
+			);
+			path = history;
+			sourceTree = "<group>";
+		};
+		073D67DB2B1CE80800E0BE81 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				073D67D42B1CE4D600E0BE81 /* HistoryScreen.swift */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		073D67DC2B1DBCE800E0BE81 /* previews */ = {
+			isa = PBXGroup;
+			children = (
+				073D67DD2B1DBCFD00E0BE81 /* PreviewDataController.swift */,
+			);
+			path = previews;
 			sourceTree = "<group>";
 		};
 		07B2AEFC2AF6A1DD00866EE2 = {
@@ -142,6 +176,8 @@
 		07B2AF072AF6A1DD00866EE2 /* Push Up Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				073D67DC2B1DBCE800E0BE81 /* previews */,
+				073D67DB2B1CE80800E0BE81 /* screens */,
 				0715A5102B19CC6E00C00ABA /* views */,
 				0715A50A2B13B63100C00ABA /* core */,
 				07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */,
@@ -315,13 +351,17 @@
 			files = (
 				0715A5142B19CCE200C00ABA /* ARFaceTrackingView.swift in Sources */,
 				0715A5162B1B293700C00ABA /* AccelerationData.swift in Sources */,
+				073D67DA2B1CE60900E0BE81 /* AllHistoryView.swift in Sources */,
 				0715A2EC2B13781100C00ABA /* rnd.swift in Sources */,
 				0715A50C2B13B64200C00ABA /* StatefulTracker.swift in Sources */,
 				0715A2EE2B137B5500C00ABA /* PushUpCounter.swift in Sources */,
+				073D67D52B1CE4D600E0BE81 /* HistoryScreen.swift in Sources */,
 				07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */,
+				073D67D82B1CE5E000E0BE81 /* TodayHistoryView.swift in Sources */,
 				07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */,
 				073D67D12B1CDBDE00E0BE81 /* TrackingView.swift in Sources */,
 				073D67CF2B1C70FF00E0BE81 /* PushUpSet.swift in Sources */,
+				073D67DE2B1DBCFD00E0BE81 /* PreviewDataController.swift in Sources */,
 				075D02A82B12809500E72927 /* RepCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

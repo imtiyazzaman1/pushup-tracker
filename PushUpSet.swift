@@ -18,4 +18,11 @@ import SwiftData
         self.reps = reps
     }
     
+    static func todayPredicate() -> Predicate<PushUpSet> {
+        let today = Calendar.current.startOfDay(for: Date())
+        
+        return #Predicate<PushUpSet> { set in
+            set.timestamp >= today
+        }
+    }
 }

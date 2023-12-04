@@ -30,8 +30,6 @@ struct TrackingView: View {
                 .font(.system(size: 100))
                 .fontWeight(.bold)
             
-            Text("\(total)")
-
             Button(isTracking ? "Stop" : "Start") {
                 isTracking.toggle()
                 if (isTracking) {
@@ -47,12 +45,6 @@ struct TrackingView: View {
             
             ARFaceTrackingView(tracker: tracker, isTracking: $isTracking)
                         .frame(width: 0, height: 0)
-            
-            List{
-                ForEach(sets) { pushUpSet in
-                    Text("\(dateFormatter.string(from: pushUpSet.timestamp)) - \(pushUpSet.reps)")
-                }
-            }
         }
     }
     
