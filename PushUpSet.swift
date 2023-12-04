@@ -11,11 +11,16 @@ import SwiftData
 
 
 @Model public class PushUpSet {
-    var timestamp: Date = Date()
+    var timestamp: Date
     var reps: Int
 
-    public init(_ reps: Int) { 
+    convenience public init(_ reps: Int) {
+        self.init(reps, Date())
+    }
+    
+    init(_ reps: Int, _ date: Date) {
         self.reps = reps
+        self.timestamp = date
     }
     
     static func todayPredicate() -> Predicate<PushUpSet> {

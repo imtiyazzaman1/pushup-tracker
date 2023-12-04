@@ -16,6 +16,11 @@ struct TodayHistoryView: View {
     
     private let dateFormatter = DateFormatter()
     
+    init() {
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+    }
+    
     var body: some View {
         List{
             ForEach(sets) { pushUpSet in
