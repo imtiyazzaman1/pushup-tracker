@@ -19,7 +19,7 @@ struct HistoryScreen: View {
     
     var body: some View {
         TabView(selection: $historyIndex) {
-            TodayHistoryView()
+            TodayHistoryView(todaysSets)
                 .tabItem { Text("Today (\(total))") }
                 .tag(0)
             AllHistoryView()

@@ -9,16 +9,16 @@ import SwiftUI
 import SwiftData
 
 struct TodayHistoryView: View {
-    @Environment(\.modelContext) private var modelContext
+    private let sets: [PushUpSet]
     
-    @Query(filter: PushUpSet.todayPredicate(), sort: \PushUpSet.timestamp, order: .reverse)
-    private var sets:[PushUpSet]
+    private let dateFormatter: DateFormatter
     
-    private let dateFormatter = DateFormatter()
-    
-    init() {
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
+    init(_ sets: [PushUpSet]) {
+        self.sets = sets
+        
+        self.dateFormatter = DateFormatter()
+        self.dateFormatter.dateStyle = .short
+        self.dateFormatter.timeStyle = .short
     }
     
     var body: some View {
@@ -31,6 +31,5 @@ struct TodayHistoryView: View {
 }
 
 #Preview {
-    return TodayHistoryView()
-        .modelContainer(PreviewDataController.previewContainer)
+    return TodayHistoryView(PreviewDataController.generateTodaySets())
 }
