@@ -17,15 +17,30 @@ struct TodayHistoryView: View {
         self.sets = sets
         
         self.dateFormatter = DateFormatter()
-        self.dateFormatter.dateStyle = .short
+        self.dateFormatter.dateStyle = .none
         self.dateFormatter.timeStyle = .short
     }
     
     var body: some View {
-        List{
-            ForEach(sets) { pushUpSet in
-                Text("\(dateFormatter.string(from: pushUpSet.timestamp)) - \(pushUpSet.reps)")
+        List {
+            Section {
+                ForEach(sets) { pushUpSet in
+                    PushUpSetRow(set: pushUpSet)
+                }
+            } header: {
+                HStack {
+                    Text("Total")
+                    Spacer()
+                    Text("\(calculateTotal())")
+                }
             }
+        }
+        .scrollContentBackground(.hidden)
+    }
+    
+    private func calculateTotal() -> Int {
+        return sets.reduce(0) { res, pSet in
+            return res + pSet.reps
         }
     }
 }
