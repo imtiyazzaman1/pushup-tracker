@@ -9,11 +9,8 @@ import SwiftUI
 import SwiftData
 
 struct TodayHistoryView: View {
-    private let sets: [PushUpSet]
-    
-    init(_ sets: [PushUpSet]) {
-        self.sets = sets
-    }
+    @Query(filter: PushUpSet.todayPredicate(), sort: \PushUpSet.timestamp, order: .reverse)
+    private var sets:[PushUpSet]
     
     var body: some View {
         PushUpSetList(sets)
@@ -21,5 +18,6 @@ struct TodayHistoryView: View {
 }
 
 #Preview {
-    return TodayHistoryView(PreviewDataController.generateTodaySets())
+    TodayHistoryView()
+        .modelContainer(PreviewDataController.previewContainer)
 }

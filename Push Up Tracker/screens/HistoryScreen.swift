@@ -11,16 +11,10 @@ import SwiftData
 struct HistoryScreen: View {
     @State private var historyIndex = 0
     
-    @Environment(\.modelContext) private var modelContext
-    
-    @Query(filter: PushUpSet.todayPredicate(), sort: \PushUpSet.timestamp, order: .reverse)
-    private var todaysSets:[PushUpSet]
-    @State private var total: Int = 0
-    
     var body: some View {
         TabView(selection: $historyIndex) {
-            TodayHistoryView(todaysSets)
-                .tabItem { Text("Today (\(total))") }
+            TodayHistoryView()
+                .tabItem { Text("Today") }
                 .tag(0)
             AllHistoryView()
                 .tabItem { Text("All") }
@@ -28,12 +22,6 @@ struct HistoryScreen: View {
             // Add more views as needed
         }
         .tabViewStyle(DefaultTabViewStyle())
-        .onAppear(perform: {
-            total = todaysSets.reduce(0) { res, current in
-                res + current.reps
-            }
-        })
-        
     }
 }
 
