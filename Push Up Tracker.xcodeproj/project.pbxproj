@@ -21,6 +21,7 @@
 		073D67DA2B1CE60900E0BE81 /* AllHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67D92B1CE60900E0BE81 /* AllHistoryView.swift */; };
 		073D67DE2B1DBCFD00E0BE81 /* PreviewDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67DD2B1DBCFD00E0BE81 /* PreviewDataController.swift */; };
 		073D67E02B1F0D0A00E0BE81 /* PushUpSetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67DF2B1F0D0A00E0BE81 /* PushUpSetRow.swift */; };
+		073D67E32B1F124700E0BE81 /* PushUpSetList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67E22B1F124700E0BE81 /* PushUpSetList.swift */; };
 		075D02A82B12809500E72927 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D02A72B12809500E72927 /* RepCounterView.swift */; };
 		07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */; };
 		07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */; };
@@ -63,6 +64,7 @@
 		073D67D92B1CE60900E0BE81 /* AllHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHistoryView.swift; sourceTree = "<group>"; };
 		073D67DD2B1DBCFD00E0BE81 /* PreviewDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewDataController.swift; sourceTree = "<group>"; };
 		073D67DF2B1F0D0A00E0BE81 /* PushUpSetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSetRow.swift; sourceTree = "<group>"; };
+		073D67E22B1F124700E0BE81 /* PushUpSetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSetList.swift; sourceTree = "<group>"; };
 		075D02A72B12809500E72927 /* RepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterView.swift; sourceTree = "<group>"; };
 		07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Push Up Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerApp.swift; sourceTree = "<group>"; };
@@ -122,10 +124,10 @@
 		0715A5102B19CC6E00C00ABA /* views */ = {
 			isa = PBXGroup;
 			children = (
+				073D67E12B1F122A00E0BE81 /* list */,
 				073D67D62B1CE5C600E0BE81 /* history */,
 				0715A5132B19CCE200C00ABA /* ARFaceTrackingView.swift */,
 				073D67D02B1CDBDE00E0BE81 /* TrackingView.swift */,
-				073D67DF2B1F0D0A00E0BE81 /* PushUpSetRow.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -153,6 +155,15 @@
 				073D67DD2B1DBCFD00E0BE81 /* PreviewDataController.swift */,
 			);
 			path = previews;
+			sourceTree = "<group>";
+		};
+		073D67E12B1F122A00E0BE81 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				073D67DF2B1F0D0A00E0BE81 /* PushUpSetRow.swift */,
+				073D67E22B1F124700E0BE81 /* PushUpSetList.swift */,
+			);
+			path = list;
 			sourceTree = "<group>";
 		};
 		07B2AEFC2AF6A1DD00866EE2 = {
@@ -363,6 +374,7 @@
 				073D67D82B1CE5E000E0BE81 /* TodayHistoryView.swift in Sources */,
 				07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */,
 				073D67D12B1CDBDE00E0BE81 /* TrackingView.swift in Sources */,
+				073D67E32B1F124700E0BE81 /* PushUpSetList.swift in Sources */,
 				073D67CF2B1C70FF00E0BE81 /* PushUpSet.swift in Sources */,
 				073D67E02B1F0D0A00E0BE81 /* PushUpSetRow.swift in Sources */,
 				073D67DE2B1DBCFD00E0BE81 /* PreviewDataController.swift in Sources */,
