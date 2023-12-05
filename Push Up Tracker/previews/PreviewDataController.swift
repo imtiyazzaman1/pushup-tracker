@@ -15,23 +15,11 @@ class PreviewDataController {
             let config = ModelConfiguration(isStoredInMemoryOnly: true)
             let container = try ModelContainer(for: PushUpSet.self, configurations: config)
             
-            let calendar = Calendar.current
-            
-            for i in 1..<6 {
-                let reps = Int.random(in: 1...50)
-                
-                let set = PushUpSet(reps, Date())
+            generateTodaySets().forEach { set in
                 container.mainContext.insert(set)
             }
             
-            for i in 1..<20 {
-                let reps = Int.random(in: 1...50)
-                let today = calendar.startOfDay(for: Date())
-                let yesterday = calendar.date(byAdding: .day, value: -1, to: today)!
-                
-                let timestamp = calendar.date(byAdding: .day, value: Int.random(in: -5..<0), to: yesterday)!
-                
-                let set = PushUpSet(reps, timestamp)
+            generatePastSets().forEach { set in
                 container.mainContext.insert(set)
             }
             
@@ -62,5 +50,37 @@ class PreviewDataController {
         let randomDate = startDate.addingTimeInterval(randomTimeInterval)
         
         return randomDate
+    }
+    
+    static func generateTodaySets() -> [PushUpSet] {
+        var arr: [PushUpSet] = []
+        
+        for _ in 1..<6 {
+            let reps = Int.random(in: 1...50)
+            
+            let set = PushUpSet(reps, Date())
+            arr.append(set)
+        }
+        
+        return arr
+    }
+    
+    static func generatePastSets() -> [PushUpSet] {
+        var arr: [PushUpSet] = []
+        
+        let calendar = Calendar.current
+        for _ in 1..<20 {
+            let reps = Int.random(in: 1...50)
+            let today = calendar.startOfDay(for: Date())
+            let yesterday = calendar.date(byAdding: .day, value: -1, to: today)!
+            
+            let timestamp = calendar.date(byAdding: .day, value: Int.random(in: -5..<0), to: yesterday)!
+            
+            let set = PushUpSet(reps, timestamp)
+            
+            arr.append(set)
+        }
+        
+        return arr
     }
 }
