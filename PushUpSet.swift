@@ -11,8 +11,9 @@ import SwiftData
 
 
 @Model public class PushUpSet {
-    var timestamp: Date
     var reps: Int
+    var timestamp: Date
+    var day: Date
 
     convenience public init(_ reps: Int) {
         self.init(reps, Date())
@@ -21,6 +22,7 @@ import SwiftData
     init(_ reps: Int, _ date: Date) {
         self.reps = reps
         self.timestamp = date
+        self.day = Calendar.current.startOfDay(for: date)
     }
     
     static func todayPredicate() -> Predicate<PushUpSet> {
