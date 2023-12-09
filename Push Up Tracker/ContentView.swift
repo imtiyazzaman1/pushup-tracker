@@ -23,14 +23,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: PushUpSet.self, configurations: config)
-    
-    for i in 1..<10 {
-        let set = PushUpSet(i)
-        container.mainContext.insert(set)
-    }
-    
     return ContentView()
-        .modelContainer(container)
+        .modelContainer(PreviewDataController.previewContainer)
 }
