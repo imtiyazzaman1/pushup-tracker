@@ -13,7 +13,10 @@ struct TodayHistoryView: View {
     private var sets:[PushUpSet]
     
     var body: some View {
-        PushUpSetList(sets)
+        List {
+            PushUpSetListSection(sets)
+        }
+        .scrollContentBackground(.hidden)
     }
 }
 
