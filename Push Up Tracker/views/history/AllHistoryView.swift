@@ -10,6 +10,8 @@ import SwiftData
 import SectionedQuery
 
 struct AllHistoryView: View {
+    @State private var expandedSections: Set<Date> = []
+    
     @SectionedQuery(\.day, sort: \.timestamp, order: .reverse, animation: .default)
     private var sets: SectionedResults<Date, PushUpSet>
     
@@ -23,18 +25,37 @@ struct AllHistoryView: View {
     var body: some View {
         List(sets) { section in
             Section {
-                ForEach(section) { set in
-                    PushUpSetRow(set: set)
+                if (expandedSections.contains(section.id)) {
+                    ForEach(section) { set in
+                        PushUpSetRow(set: set)
+                    }
                 }
             } header: {
                 HStack {
                     Text(formatter.string(from: section.id))
                     Spacer()
                     Text("\(calculateTotal(section.elements))")
+                    Image(systemName: "chevron.right")
+                        .rotationEffect(.degrees(expandedSections.contains(section.id) ? 90 : 0))
+                }
+                .onTapGesture {
+                    toggleSection(section.id)
                 }
             }
         }
         .scrollContentBackground(.hidden)
+        .onAppear {
+            expandedSections.insert(sets[0].id)
+        }
+    }
+    
+    private func toggleSection(_ id: Date) {
+        if (expandedSections.contains(id)) {
+            expandedSections.remove(id)
+        } else {
+            expandedSections.insert(id)
+        }
+        
     }
     
     private func calculateTotal(_ sets: [PushUpSet]) -> Int {
