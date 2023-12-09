@@ -17,8 +17,7 @@ struct AllHistoryView: View {
     
     init() {
         self.formatter = DateFormatter()
-        self.formatter.dateStyle = .medium
-        self.formatter.timeStyle = .medium
+        self.formatter.dateFormat = "EE, dd/MM/YY"
     }
     
     var body: some View {
