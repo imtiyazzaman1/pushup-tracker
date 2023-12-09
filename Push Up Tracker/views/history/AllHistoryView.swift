@@ -10,21 +10,15 @@ import SwiftData
 import SectionedQuery
 
 struct AllHistoryView: View {
-    
-//    @Query(filter: PushUpSet.todayPredicate(), sort: \PushUpSet.timestamp, order: .reverse)
-    
     @SectionedQuery(\.day, sort: \.timestamp, order: .reverse, animation: .default)
     private var sets: SectionedResults<Date, PushUpSet>
     
-    @State var bool: Bool = true
-    
-    var formatter = DateFormatter()
+    private var formatter: DateFormatter
     
     init() {
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .medium
-        
-        bool = true
+        self.formatter = DateFormatter()
+        self.formatter.dateStyle = .medium
+        self.formatter.timeStyle = .medium
     }
     
     var body: some View {
@@ -49,12 +43,6 @@ struct AllHistoryView: View {
             return res + pSet.reps
         }
     }
-    
-//    private func calculateTotal() -> Int {
-//        return sets.reduce(0) { res, pSet in
-//            return res + pSet.reps
-//        }
-//    }
 }
 
 #Preview {
