@@ -20,33 +20,16 @@ struct AllHistoryView: View {
     init() {
         self.formatter = DateFormatter()
         self.formatter.dateFormat = "EE, dd/MM/YY"
+        
     }
     
     var body: some View {
-        List(sets) { section in
-            Section {
-                if (expandedSections.contains(section.id)) {
-                    ForEach(section) { set in
-                        PushUpSetRow(set: set)
-                    }
-                }
-            } header: {
-                HStack {
-                    Text(formatter.string(from: section.id))
-                    Spacer()
-                    Text("\(calculateTotal(section.elements))")
-                    Image(systemName: "chevron.right")
-                        .rotationEffect(.degrees(expandedSections.contains(section.id) ? 90 : 0))
-                }
-                .onTapGesture {
-                    toggleSection(section.id)
-                }
+        List {
+            ForEach(Array(sets.enumerated()), id: \.offset) { index, section in
+                PushUpSetListSection(section.elements, title: formatter.string(from: section.id), isExpanded: index == 0)
             }
         }
         .scrollContentBackground(.hidden)
-        .onAppear {
-            expandedSections.insert(sets[0].id)
-        }
     }
     
     private func toggleSection(_ id: Date) {
