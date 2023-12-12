@@ -23,9 +23,6 @@ struct TrackingView: View {
     
     var body: some View {
         VStack {
-            Text("Push-Up Counter")
-                .font(.largeTitle)
-
             Text("\(tracker.count)")
                 .font(.system(size: 100))
                 .fontWeight(.bold)
@@ -39,7 +36,7 @@ struct TrackingView: View {
                 }
             }
             .padding()
-            .background(Color.blue)
+            .background(isTracking ? Color.red : Color.green)
             .foregroundColor(.white)
             .clipShape(Capsule())
             
