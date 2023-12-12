@@ -56,6 +56,7 @@ struct TrackingView: View {
     }
     
     private func save() {
+        guard tracker.count > 0 else { return }
         let p = PushUpSet(tracker.count)
         modelContext.insert(p)
     }
