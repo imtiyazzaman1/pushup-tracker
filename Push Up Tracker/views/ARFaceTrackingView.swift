@@ -38,6 +38,7 @@ struct ARFaceTrackingView: UIViewRepresentable {
     }
 
     class Coordinator: NSObject, ARSessionDelegate {
+        let threshold: Float = 0.1
         var parent: ARFaceTrackingView
 
         init(_ parent: ARFaceTrackingView) {
@@ -49,14 +50,23 @@ struct ARFaceTrackingView: UIViewRepresentable {
                 guard let faceAnchor = anchors.compactMap({ $0 as? ARFaceAnchor }).first else { return }
                 guard let acceleration = accelData?.acceleration else { return }
                 
+                let z = roundTo1Dp(faceAnchor.transform.columns.2.z)
+                
+                guard z >= 0 else { return }
+                
                 var data: AccelerationData = AccelerationData(x: acceleration.x, y: acceleration.y, z: acceleration.z)
                 
-                if (faceAnchor.isTracked) {
-                    parent.tracker.setPosition(PushUpPosition.up, data)
+                if (!faceAnchor.isTracked && z <= threshold) {
+                    parent.tracker.setPosition(.down, data)
                 } else {
-                    parent.tracker.setPosition(PushUpPosition.down, data)
+                    parent.tracker.setPosition(.up, data)
                 }
             }
+        }
+        
+        private func roundTo1Dp(_ number: Float) -> Float {
+            let factor = pow(10.0, Float(1))
+            return (number * factor).rounded() / factor
         }
     }
 }

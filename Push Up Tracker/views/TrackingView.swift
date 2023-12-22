@@ -18,6 +18,10 @@ struct TrackingView: View {
     
     @State private var isTracking = false
     @State private var total: Int = 0
+    @State private var z0: Float = 0.0
+    @State private var z1: Float = 0.0
+    @State private var z2: Float = 0.0
+    @State private var z3: Float = 0.0
     
     private let dateFormatter = DateFormatter()
     
@@ -43,6 +47,11 @@ struct TrackingView: View {
             ARFaceTrackingView(tracker: tracker, isTracking: $isTracking)
                         .frame(width: 0, height: 0)
         }
+    }
+    
+    func round(_ number: Float) -> Float {
+        let factor = pow(10.0, Float(1))
+        return (number * factor).rounded() / factor
     }
     
     func start() {
