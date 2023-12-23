@@ -27,6 +27,12 @@ struct ARFaceTrackingView: UIViewRepresentable {
 
     func updateUIView(_ uiView: ARSCNView, context: Context) {
         if (isTracking) {
+            let configuration = ARFaceTrackingView.configuration
+            
+            configuration.isLightEstimationEnabled = false
+            configuration.worldAlignment = .gravity
+            configuration.maximumNumberOfTrackedFaces = 1
+            
             ARFaceTrackingView.arView.session.run(ARFaceTrackingView.configuration)
         } else {
             ARFaceTrackingView.arView.session.pause()
@@ -54,7 +60,7 @@ struct ARFaceTrackingView: UIViewRepresentable {
                 
                 guard z >= 0 else { return }
                 
-                var data: AccelerationData = AccelerationData(x: acceleration.x, y: acceleration.y, z: acceleration.z)
+                let data: AccelerationData = AccelerationData(x: acceleration.x, y: acceleration.y, z: acceleration.z)
                 
                 if (!faceAnchor.isTracked && z <= threshold) {
                     parent.tracker.setPosition(.down, data)
