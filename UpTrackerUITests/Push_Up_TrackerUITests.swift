@@ -1,5 +1,5 @@
 //
-//  Push_Up_TrackerUITests.swift
+//  UpTrackerUITests.swift
 //  Push Up TrackerUITests
 //
 //  Created by Imtiyaz Zaman on 04/11/2023.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class Push_Up_TrackerUITests: XCTestCase {
+final class UpTrackerUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

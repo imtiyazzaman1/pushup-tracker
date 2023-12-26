@@ -1,5 +1,5 @@
 //
-//  Push_Up_TrackerApp.swift
+//  UpTrackerApp.swift
 //  Push Up Tracker
 //
 //  Created by Imtiyaz Zaman on 04/11/2023.
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct Push_Up_TrackerApp: App {
+struct UpTrackerApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             PushUpSet.self,

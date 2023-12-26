@@ -1,5 +1,5 @@
 //
-//  Push_Up_TrackerUITestsLaunchTests.swift
+//  UpTrackerUITestsLaunchTests.swift
 //  Push Up TrackerUITests
 //
 //  Created by Imtiyaz Zaman on 04/11/2023.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class Push_Up_TrackerUITestsLaunchTests: XCTestCase {
+final class UpTrackerUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

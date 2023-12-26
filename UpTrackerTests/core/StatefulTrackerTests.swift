@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import Push_Up_Tracker
+@testable import UpTracker
 
 final class StatefulTrackerTests: XCTestCase {
     let acceleration = AccelerationData(x: -0.003, y: -0.03, z: -0.998)

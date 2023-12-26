@@ -1,14 +1,14 @@
 //
-//  Push_Up_TrackerTests.swift
+//  PushUpCounterTests.swift
 //  Push Up TrackerTests
 //
-//  Created by Imtiyaz Zaman on 04/11/2023.
+//  Created by Imtiyaz Zaman on 26/11/2023.
 //
 
 import XCTest
-@testable import Push_Up_Tracker
+@testable import UpTracker
 
-final class Push_Up_TrackerTests: XCTestCase {
+final class PushUpCounterTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,6 +24,16 @@ final class Push_Up_TrackerTests: XCTestCase {
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    }
+    
+    func testCountIncreases() {
+        let counter = PushUpCounter()
+        
+        counter.setState(PushUpState.up)
+        counter.setState(PushUpState.down)
+        counter.setState(PushUpState.up)
+        
+        XCTAssertEqual(counter.count, 1)
     }
 
     func testPerformanceExample() throws {

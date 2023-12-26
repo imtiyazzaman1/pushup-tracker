@@ -25,7 +25,7 @@
 		073D67E72B21B49B00E0BE81 /* PushUpSetListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D67E62B21B49B00E0BE81 /* PushUpSetListSection.swift */; };
 		073D67EA2B21B8FE00E0BE81 /* SectionedQuery in Frameworks */ = {isa = PBXBuildFile; productRef = 073D67E92B21B8FE00E0BE81 /* SectionedQuery */; };
 		075D02A82B12809500E72927 /* RepCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075D02A72B12809500E72927 /* RepCounterView.swift */; };
-		07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */; };
+		07B2AF092AF6A1DD00866EE2 /* UpTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF082AF6A1DD00866EE2 /* UpTrackerApp.swift */; };
 		07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */; };
 		07B2AF0D2AF6A1DE00866EE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */; };
 		07B2AF102AF6A1DE00866EE2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07B2AF0F2AF6A1DE00866EE2 /* Preview Assets.xcassets */; };
@@ -69,15 +69,15 @@
 		073D67E22B1F124700E0BE81 /* PushUpSetList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSetList.swift; sourceTree = "<group>"; };
 		073D67E62B21B49B00E0BE81 /* PushUpSetListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpSetListSection.swift; sourceTree = "<group>"; };
 		075D02A72B12809500E72927 /* RepCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCounterView.swift; sourceTree = "<group>"; };
-		07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Push Up Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerApp.swift; sourceTree = "<group>"; };
+		07B2AF052AF6A1DD00866EE2 /* UpTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B2AF082AF6A1DD00866EE2 /* UpTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpTrackerApp.swift; sourceTree = "<group>"; };
 		07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07B2AF0F2AF6A1DE00866EE2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07B2AF162AF6A1DE00866EE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07B2AF1B2AF6A1DE00866EE2 /* Push Up TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Push Up TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B2AF1B2AF6A1DE00866EE2 /* UpTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF1F2AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerTests.swift; sourceTree = "<group>"; };
-		07B2AF252AF6A1DE00866EE2 /* Push Up TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Push Up TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B2AF252AF6A1DE00866EE2 /* UpTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UpTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B2AF292AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerUITests.swift; sourceTree = "<group>"; };
 		07B2AF2B2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push_Up_TrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,9 +182,9 @@
 		07B2AEFC2AF6A1DD00866EE2 = {
 			isa = PBXGroup;
 			children = (
-				07B2AF072AF6A1DD00866EE2 /* Push Up Tracker */,
-				07B2AF1E2AF6A1DE00866EE2 /* Push Up TrackerTests */,
-				07B2AF282AF6A1DE00866EE2 /* Push Up TrackerUITests */,
+				07B2AF072AF6A1DD00866EE2 /* UpTracker */,
+				07B2AF1E2AF6A1DE00866EE2 /* UpTrackerTests */,
+				07B2AF282AF6A1DE00866EE2 /* UpTrackerUITests */,
 				07B2AF062AF6A1DD00866EE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -192,14 +192,14 @@
 		07B2AF062AF6A1DD00866EE2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */,
-				07B2AF1B2AF6A1DE00866EE2 /* Push Up TrackerTests.xctest */,
-				07B2AF252AF6A1DE00866EE2 /* Push Up TrackerUITests.xctest */,
+				07B2AF052AF6A1DD00866EE2 /* UpTracker.app */,
+				07B2AF1B2AF6A1DE00866EE2 /* UpTrackerTests.xctest */,
+				07B2AF252AF6A1DE00866EE2 /* UpTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		07B2AF072AF6A1DD00866EE2 /* Push Up Tracker */ = {
+		07B2AF072AF6A1DD00866EE2 /* UpTracker */ = {
 			isa = PBXGroup;
 			children = (
 				073D67EB2B245AA100E0BE81 /* model */,
@@ -207,7 +207,7 @@
 				073D67DB2B1CE80800E0BE81 /* screens */,
 				0715A5102B19CC6E00C00ABA /* views */,
 				0715A50A2B13B63100C00ABA /* core */,
-				07B2AF082AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift */,
+				07B2AF082AF6A1DD00866EE2 /* UpTrackerApp.swift */,
 				07B2AF0A2AF6A1DD00866EE2 /* ContentView.swift */,
 				0715A2EB2B13781100C00ABA /* rnd.swift */,
 				07B2AF0C2AF6A1DE00866EE2 /* Assets.xcassets */,
@@ -216,7 +216,7 @@
 				075D02A72B12809500E72927 /* RepCounterView.swift */,
 				0715A2ED2B137B5500C00ABA /* PushUpCounter.swift */,
 			);
-			path = "Push Up Tracker";
+			path = UpTracker;
 			sourceTree = "<group>";
 		};
 		07B2AF0E2AF6A1DE00866EE2 /* Preview Content */ = {
@@ -227,31 +227,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		07B2AF1E2AF6A1DE00866EE2 /* Push Up TrackerTests */ = {
+		07B2AF1E2AF6A1DE00866EE2 /* UpTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
 				0715A50D2B13B69600C00ABA /* core */,
 				07B2AF1F2AF6A1DE00866EE2 /* Push_Up_TrackerTests.swift */,
 				0715A2F12B137DD900C00ABA /* PushUpCounterTests.swift */,
 			);
-			path = "Push Up TrackerTests";
+			path = UpTrackerTests;
 			sourceTree = "<group>";
 		};
-		07B2AF282AF6A1DE00866EE2 /* Push Up TrackerUITests */ = {
+		07B2AF282AF6A1DE00866EE2 /* UpTrackerUITests */ = {
 			isa = PBXGroup;
 			children = (
 				07B2AF292AF6A1DE00866EE2 /* Push_Up_TrackerUITests.swift */,
 				07B2AF2B2AF6A1DE00866EE2 /* Push_Up_TrackerUITestsLaunchTests.swift */,
 			);
-			path = "Push Up TrackerUITests";
+			path = UpTrackerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		07B2AF042AF6A1DD00866EE2 /* Push Up Tracker */ = {
+		07B2AF042AF6A1DD00866EE2 /* UpTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07B2AF2F2AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "Push Up Tracker" */;
+			buildConfigurationList = 07B2AF2F2AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "UpTracker" */;
 			buildPhases = (
 				07B2AF012AF6A1DD00866EE2 /* Sources */,
 				07B2AF022AF6A1DD00866EE2 /* Frameworks */,
@@ -261,17 +261,17 @@
 			);
 			dependencies = (
 			);
-			name = "Push Up Tracker";
+			name = UpTracker;
 			packageProductDependencies = (
 				073D67E92B21B8FE00E0BE81 /* SectionedQuery */,
 			);
 			productName = "Push Up Tracker";
-			productReference = 07B2AF052AF6A1DD00866EE2 /* Push Up Tracker.app */;
+			productReference = 07B2AF052AF6A1DD00866EE2 /* UpTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		07B2AF1A2AF6A1DE00866EE2 /* Push Up TrackerTests */ = {
+		07B2AF1A2AF6A1DE00866EE2 /* UpTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07B2AF322AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "Push Up TrackerTests" */;
+			buildConfigurationList = 07B2AF322AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "UpTrackerTests" */;
 			buildPhases = (
 				07B2AF172AF6A1DE00866EE2 /* Sources */,
 				07B2AF182AF6A1DE00866EE2 /* Frameworks */,
@@ -282,14 +282,14 @@
 			dependencies = (
 				07B2AF1D2AF6A1DE00866EE2 /* PBXTargetDependency */,
 			);
-			name = "Push Up TrackerTests";
+			name = UpTrackerTests;
 			productName = "Push Up TrackerTests";
-			productReference = 07B2AF1B2AF6A1DE00866EE2 /* Push Up TrackerTests.xctest */;
+			productReference = 07B2AF1B2AF6A1DE00866EE2 /* UpTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		07B2AF242AF6A1DE00866EE2 /* Push Up TrackerUITests */ = {
+		07B2AF242AF6A1DE00866EE2 /* UpTrackerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07B2AF352AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "Push Up TrackerUITests" */;
+			buildConfigurationList = 07B2AF352AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "UpTrackerUITests" */;
 			buildPhases = (
 				07B2AF212AF6A1DE00866EE2 /* Sources */,
 				07B2AF222AF6A1DE00866EE2 /* Frameworks */,
@@ -300,9 +300,9 @@
 			dependencies = (
 				07B2AF272AF6A1DE00866EE2 /* PBXTargetDependency */,
 			);
-			name = "Push Up TrackerUITests";
+			name = UpTrackerUITests;
 			productName = "Push Up TrackerUITests";
-			productReference = 07B2AF252AF6A1DE00866EE2 /* Push Up TrackerUITests.xctest */;
+			productReference = 07B2AF252AF6A1DE00866EE2 /* UpTrackerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -313,7 +313,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					07B2AF042AF6A1DD00866EE2 = {
 						CreatedOnToolsVersion = 14.2;
@@ -328,7 +328,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 07B2AF002AF6A1DD00866EE2 /* Build configuration list for PBXProject "Push Up Tracker" */;
+			buildConfigurationList = 07B2AF002AF6A1DD00866EE2 /* Build configuration list for PBXProject "UpTracker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -344,9 +344,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				07B2AF042AF6A1DD00866EE2 /* Push Up Tracker */,
-				07B2AF1A2AF6A1DE00866EE2 /* Push Up TrackerTests */,
-				07B2AF242AF6A1DE00866EE2 /* Push Up TrackerUITests */,
+				07B2AF042AF6A1DD00866EE2 /* UpTracker */,
+				07B2AF1A2AF6A1DE00866EE2 /* UpTrackerTests */,
+				07B2AF242AF6A1DE00866EE2 /* UpTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -391,7 +391,7 @@
 				073D67D52B1CE4D600E0BE81 /* HistoryScreen.swift in Sources */,
 				07B2AF0B2AF6A1DD00866EE2 /* ContentView.swift in Sources */,
 				073D67D82B1CE5E000E0BE81 /* TodayHistoryView.swift in Sources */,
-				07B2AF092AF6A1DD00866EE2 /* Push_Up_TrackerApp.swift in Sources */,
+				07B2AF092AF6A1DD00866EE2 /* UpTrackerApp.swift in Sources */,
 				073D67D12B1CDBDE00E0BE81 /* TrackingView.swift in Sources */,
 				073D67E32B1F124700E0BE81 /* PushUpSetList.swift in Sources */,
 				073D67CF2B1C70FF00E0BE81 /* PushUpSet.swift in Sources */,
@@ -426,12 +426,12 @@
 /* Begin PBXTargetDependency section */
 		07B2AF1D2AF6A1DE00866EE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07B2AF042AF6A1DD00866EE2 /* Push Up Tracker */;
+			target = 07B2AF042AF6A1DD00866EE2 /* UpTracker */;
 			targetProxy = 07B2AF1C2AF6A1DE00866EE2 /* PBXContainerItemProxy */;
 		};
 		07B2AF272AF6A1DE00866EE2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07B2AF042AF6A1DD00866EE2 /* Push Up Tracker */;
+			target = 07B2AF042AF6A1DD00866EE2 /* UpTracker */;
 			targetProxy = 07B2AF262AF6A1DE00866EE2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -473,6 +473,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -533,6 +534,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -558,10 +560,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Push Up Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UpTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = GDZK2LSJJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = UpTracker;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -573,7 +576,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imtiyazzaman.Push-Up-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imtiyazzaman.UpTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -588,10 +591,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Push Up Tracker/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UpTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = GDZK2LSJJK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = UpTracker;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -603,7 +607,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imtiyazzaman.Push-Up-Tracker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imtiyazzaman.UpTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -622,7 +626,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imtiyazzaman.Push-Up-TrackerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imtiyazzaman.UpTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -642,7 +646,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imtiyazzaman.Push-Up-TrackerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imtiyazzaman.UpTrackerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -661,7 +665,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imtiyazzaman.Push-Up-TrackerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imtiyazzaman.UpTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -680,7 +684,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.imtiyazzaman.Push-Up-TrackerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = com.imtiyazzaman.UpTrackerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -692,7 +696,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07B2AF002AF6A1DD00866EE2 /* Build configuration list for PBXProject "Push Up Tracker" */ = {
+		07B2AF002AF6A1DD00866EE2 /* Build configuration list for PBXProject "UpTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07B2AF2D2AF6A1DE00866EE2 /* Debug */,
@@ -701,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07B2AF2F2AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "Push Up Tracker" */ = {
+		07B2AF2F2AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "UpTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07B2AF302AF6A1DE00866EE2 /* Debug */,
@@ -710,7 +714,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07B2AF322AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "Push Up TrackerTests" */ = {
+		07B2AF322AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "UpTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07B2AF332AF6A1DE00866EE2 /* Debug */,
@@ -719,7 +723,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		07B2AF352AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "Push Up TrackerUITests" */ = {
+		07B2AF352AF6A1DE00866EE2 /* Build configuration list for PBXNativeTarget "UpTrackerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07B2AF362AF6A1DE00866EE2 /* Debug */,
