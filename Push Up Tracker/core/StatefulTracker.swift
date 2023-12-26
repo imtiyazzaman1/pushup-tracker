@@ -17,23 +17,13 @@ class StatefulTracker: ObservableObject {
         self.position = PushUpPosition.up
     }
     
-    func setPosition(_ newPosition: PushUpPosition, _ acceleration: AccelerationData) -> Void {
-        guard isDeviceLyingFlat(acceleration) else { return }
-        
+    func setPosition(_ newPosition: PushUpPosition) -> Void {
         let currentPosition = self.position
-        if (currentPosition == PushUpPosition.down && newPosition == PushUpPosition.up) {
+        if (currentPosition == PushUpPosition.up && newPosition == PushUpPosition.down) {
             count += 1
         }
         
         self.position = newPosition
-    }
-    
-    private func isDeviceLyingFlat(_ acceleration: AccelerationData) -> Bool {
-        let z = acceleration.z
-        
-        let isValidZ = z < -0.9 && z > -1.1
-        
-        return isValidZ
     }
 }
 
