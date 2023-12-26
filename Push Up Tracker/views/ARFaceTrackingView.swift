@@ -55,17 +55,16 @@ struct ARFaceTrackingView: UIViewRepresentable {
             parent.motionManager.startAccelerometerUpdates(to: OperationQueue.current!) { [self] (accelData, error) in
                 guard let faceAnchor = anchors.compactMap({ $0 as? ARFaceAnchor }).first else { return }
                 guard let acceleration = accelData?.acceleration else { return }
+                guard isDeviceLyingFlat(acceleration) else { return  }
                 
                 let z = roundTo1Dp(faceAnchor.transform.columns.2.z)
                 
                 guard z >= 0 else { return }
                 
-                let data: AccelerationData = AccelerationData(x: acceleration.x, y: acceleration.y, z: acceleration.z)
-                
                 if (!faceAnchor.isTracked && z <= threshold) {
-                    parent.tracker.setPosition(.down, data)
+                    parent.tracker.setPosition(.down)
                 } else {
-                    parent.tracker.setPosition(.up, data)
+                    parent.tracker.setPosition(.up)
                 }
             }
         }
@@ -73,6 +72,14 @@ struct ARFaceTrackingView: UIViewRepresentable {
         private func roundTo1Dp(_ number: Float) -> Float {
             let factor = pow(10.0, Float(1))
             return (number * factor).rounded() / factor
+        }
+        
+        private func isDeviceLyingFlat(_ acceleration: CMAcceleration) -> Bool {
+            let z = acceleration.z
+            
+            let isValidZ = z < -0.9 && z > -1.1
+            
+            return isValidZ
         }
     }
 }
